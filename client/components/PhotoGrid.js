@@ -1,10 +1,18 @@
 import React from 'react';
 
+import Photo from './Photo';
+
 const PhotoGrid = React.createClass({
   render() {
     return (
       <div className="photo-grid">
-        I'm PhotoGrid
+        {
+          this.props.posts.map((post, index) => {
+            return (
+              <Photo {...this.props} key={index} post={post} index={index} />
+            );
+          })
+        }
       </div>
     );
   }
