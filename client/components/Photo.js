@@ -37,7 +37,7 @@ const Photo = React.createClass({
               <span className="comment-count">
                 <span className="speech-bubble"></span>
 
-                {comments[post.code] ? comments[post.code].length : 0}
+                {comments[post.code] ? ' ' + comments[post.code].length : ' ' + 0}
               </span>
             </Link>
           </div>
